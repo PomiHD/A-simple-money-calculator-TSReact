@@ -5,13 +5,11 @@ export function Header() {
     <>
       <img
         id={"header"}
-        className={"App-logo"}
+        // className={"App-logo"}
         src={"investment-calculator-logo.png"}
-        alt={"logo"}
+        alt={"logo showing a money bag"}
       />
-      <h1 id={"header"} className={"App-header"}>
-        React Investment Calculator
-      </h1>
+      <h1>React Investment Calculator</h1>
     </>
   );
 }

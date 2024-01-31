@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import "./index.css";
 import { ResultTable } from "./Components/ResultTable";
-import TabContent from "./Components/TabContent";
+import UserInput from "./Components/UserInput";
 import { Header } from "./Components/Header/Header";
 import { calculateInvestmentResults } from "./util/investment";
 import ErrorDuration from "./Components/ErrorDuration";
@@ -43,7 +43,7 @@ function App() {
     <>
       <body className={"App"}>
         <Header />
-        <TabContent
+        <UserInput
           initialInvestment={initialInvestValue}
           annualInvestment={annualInvestValue}
           expectedReturn={expectedReturnValue}
@@ -52,7 +52,7 @@ function App() {
           onEnterAiValue={handleAInvestmentChange}
           onEnterErValue={handleEReturnChange}
           onEnterDurValue={handleDurationChange}
-        ></TabContent>
+        ></UserInput>
         {durationValue < -1 && (
           <ErrorDuration onShowError={handleDurationError} />
         )}
