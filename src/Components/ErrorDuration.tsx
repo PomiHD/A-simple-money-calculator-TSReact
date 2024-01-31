@@ -6,7 +6,7 @@ export default function ErrorDuration({ onShowError }) {
       <span className="closebtn" onClick={onShowError}>
         &times;
       </span>
-      <strong>Opps!</strong> The duration should not be less than -1;
+      <strong>Opps!</strong> The duration should <strong>BIGGER</strong> than 0;
     </div>
   );
 }
