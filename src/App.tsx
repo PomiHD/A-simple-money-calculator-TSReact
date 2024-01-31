@@ -23,7 +23,7 @@ function App() {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue, // FORCE CONVERT string to number: add "+" to PARSE string to NUMBER
       };
     });
   }

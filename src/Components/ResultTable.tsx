@@ -1,8 +1,10 @@
 ﻿import React from "react";
 import { formatter } from "../util/investment";
-
+import { calculateInvestmentResults } from "../util/investment";
 export function ResultTable({ userInput }) {
   console.log(userInput);
+  const results = calculateInvestmentResults(userInput);
+  console.log(results);
   return (
     <p>result...</p>
     // <>

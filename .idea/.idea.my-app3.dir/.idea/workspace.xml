@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4d6c340-f14c-441f-881b-ecf74f3f13a5" name="Changes" comment="99. Handling Events &amp; Using Two-Way-Binding">
+    <list default="true" id="e4d6c340-f14c-441f-881b-ecf74f3f13a5" name="Changes" comment="100. Lifting State Up">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-app3.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-app3.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ResultTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ResultTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UserInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UserInput.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <workItem from="1706589799517" duration="682000" />
       <workItem from="1706639711756" duration="26211000" />
       <workItem from="1706706992491" duration="7261000" />
-      <workItem from="1706718876874" duration="2557000" />
+      <workItem from="1706718876874" duration="3246000" />
     </task>
     <task id="LOCAL-00001" summary="basic logic done">
       <option name="closed" value="true" />
@@ -138,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706720755063</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="100. Lifting State Up">
+      <option name="closed" value="true" />
+      <created>1706721651413</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706721651413</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +170,8 @@
     <MESSAGE value="add duration error component." />
     <MESSAGE value="improve UI" />
     <MESSAGE value="99. Handling Events &amp; Using Two-Way-Binding" />
-    <option name="LAST_COMMIT_MESSAGE" value="99. Handling Events &amp; Using Two-Way-Binding" />
+    <MESSAGE value="100. Lifting State Up" />
+    <option name="LAST_COMMIT_MESSAGE" value="100. Lifting State Up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
