@@ -5,6 +5,7 @@ import { ResultTable } from "./Components/ResultTable";
 import TabContent from "./Components/TabContent";
 import { Header } from "./Components/Header/Header";
 import { calculateInvestmentResults } from "./util/investment";
+import ErrorDuration from "./Components/ErrorDuration";
 
 function App() {
   const [initialInvestValue, setInitialInvestValue] = useState(0);
@@ -34,6 +35,10 @@ function App() {
     setDurationValue(event.target.value);
   }
 
+  function handleDurationError() {
+    setDurationValue(0);
+  }
+
   return (
     <>
       <body className={"App"}>
@@ -48,6 +53,9 @@ function App() {
           onEnterErValue={handleEReturnChange}
           onEnterDurValue={handleDurationChange}
         ></TabContent>
+        {durationValue < -1 && (
+          <ErrorDuration onShowError={handleDurationError} />
+        )}
         <ResultTable results={results}></ResultTable>
       </body>
     </>
