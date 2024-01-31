@@ -28,12 +28,22 @@ function App() {
     });
   }
 
+  const isDurationValid = userInput.duration >= 1;
   return (
     <>
       <body className={"App"}>
         <Header />
         <UserInput userInput={userInput} onChange={handleChange} />
-        <ResultTable userInput={userInput}></ResultTable>
+        {!isDurationValid && (
+          <p className="center">
+            <strong>Opps!</strong> The duration should not be less than -1;
+          </p>
+        )}
+        {isDurationValid ? (
+          <ResultTable userInput={userInput}></ResultTable>
+        ) : (
+          ""
+        )}
       </body>
     </>
   );
