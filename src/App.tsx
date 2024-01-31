@@ -4,24 +4,36 @@ import "./index.css";
 import { ResultTable } from "./Components/ResultTable";
 import UserInput from "./Components/UserInput";
 import { Header } from "./Components/Header/Header";
-import { calculateInvestmentResults } from "./util/investment";
-import ErrorDuration from "./Components/ErrorDuration";
 
 function App() {
-  const results = calculateInvestmentResults({
-    initialInvestment: Number(initialInvestValue),
-    annualInvestment: Number(annualInvestValue),
-    expectedReturn: Number(expectedReturnValue),
-    duration: Number(durationValue),
+  const [userInput, setUserInput] = useState({
+    initialInvestment: 10000,
+    annualInvestment: 1200,
+    expectedReturn: 6,
+    duration: 10,
   });
+
+  /**
+   * A generic function to handel input value change based on different inputIdentifier.
+   * @param inputIdentifier - The first input number.
+   * @param newValue - The second input number.
+   * @returns an object of userInput.
+   */
+  function handleChange(inputIdentifier, newValue) {
+    setUserInput((prevUserInput) => {
+      return {
+        ...prevUserInput,
+        [inputIdentifier]: newValue,
+      };
+    });
+  }
 
   return (
     <>
       <body className={"App"}>
         <Header />
-        <UserInput />
-
-        <ResultTable results={results}></ResultTable>
+        <UserInput userInput={userInput} onChange={handleChange} />
+        <ResultTable userInput={userInput}></ResultTable>
       </body>
     </>
   );
