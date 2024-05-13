@@ -6,17 +6,22 @@ Demo:
 
 ![](./public/React-Investment-Calculator-demo.gif)
 
+
+## Installation
+```bash
+git clone https://github.com/PomiHD/A-simple-money-calculator-react-ts.git
+cd A-Book-a-Session-Management-Application
+npm install
+```
+
+## Usage
+```bash
+npm start
+```
+
 ## Features
 
 - Basic arithmetic operations to calculate sums.
 - User-friendly interface built with React.
 - Responsive design using CSS.
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js
-- npm or yarn
-
 
