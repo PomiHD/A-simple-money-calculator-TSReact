@@ -5,21 +5,22 @@ import { ResultTable } from "./Components/ResultTable";
 import UserInput from "./Components/UserInput";
 import { Header } from "./Components/Header/Header";
 
+export type UserInputProps = {
+  initialInvestment: number;
+  annualInvestment: number;
+  expectedReturn: number;
+  duration: number;
+};
+
 function App() {
-  const [userInput, setUserInput] = useState({
+  const [userInput, setUserInput] = useState<UserInputProps>({
     initialInvestment: 10000,
     annualInvestment: 1200,
     expectedReturn: 6,
     duration: 10,
   });
 
-  /**
-   * A generic function to handel input value change based on different inputIdentifier.
-   * @param inputIdentifier - The first input number.
-   * @param newValue - The second input number.
-   * @returns an object of userInput.
-   */
-  function handleChange(inputIdentifier, newValue) {
+  function handleChange(inputIdentifier: string, newValue: string | number) {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
@@ -40,7 +41,12 @@ function App() {
           </p>
         )}
         {isDurationValid ? (
-          <ResultTable userInput={userInput}></ResultTable>
+          <ResultTable
+            annualInvestment={userInput.annualInvestment}
+            duration={userInput.duration}
+            expectedReturn={userInput.expectedReturn}
+            initialInvestment={userInput.initialInvestment}
+          ></ResultTable>
         ) : (
           ""
         )}

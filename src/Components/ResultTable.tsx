@@ -1,9 +1,20 @@
 ﻿import React from "react";
 import { calculateInvestmentResults, formatter } from "../util/investment";
+import { UserInputProps } from "../App";
 
-export function ResultTable({ userInput }) {
-  const results = calculateInvestmentResults(userInput);
-  const initialInvestment =
+export function ResultTable({
+  initialInvestment,
+  annualInvestment,
+  expectedReturn,
+  duration,
+}: UserInputProps) {
+  const results = calculateInvestmentResults({
+    initialInvestment,
+    annualInvestment,
+    expectedReturn,
+    duration,
+  });
+  const initialInvestment_ =
     results[0].valueEndOfYear -
     results[0].interest -
     results[0].annualInvestment;
@@ -23,7 +34,7 @@ export function ResultTable({ userInput }) {
         {results.map((result) => {
           const totalInterest =
             result.valueEndOfYear -
-            initialInvestment -
+            initialInvestment_ -
             result.annualInvestment * result.year;
           const totalCapitalInvested = result.valueEndOfYear - totalInterest;
           return (

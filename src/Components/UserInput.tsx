@@ -1,7 +1,16 @@
 ﻿import React from "react";
 import "../index.css";
 
-export default function UserInput({ onChange, userInput }) {
+type UserInputProps = {
+  onChange: (inputIdentifier: string, newValue: string | number) => void;
+  userInput: {
+    initialInvestment: number;
+    annualInvestment: number;
+    expectedReturn: number;
+    duration: number;
+  };
+};
+export default function UserInput({ onChange, userInput }: UserInputProps) {
   return (
     <section id="user-input">
       <div className={"input-group"}>
