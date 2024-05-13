@@ -10,7 +10,7 @@ Demo:
 ## Installation
 ```bash
 git clone https://github.com/PomiHD/A-simple-money-calculator-react-ts.git
-cd A-Book-a-Session-Management-Application
+cd A-simple-money-calculator-react-ts
 npm install
 ```
 
